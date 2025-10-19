@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page con Flexbox</title>
+<style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+}
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 4rem 1rem;
+  border: 1px solid #ccc;
+}
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.features__item {
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  box-sizing: border-box;
+}
+.content-block {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+figure {
+  flex: 1 1 45%;
+  margin: 0;
+}
+.content-block div {
+  flex: 1 1 45%;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.testimonial {
+  border: 1px solid #ccc;
+  flex: 1 1 320px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.cta-fullwidth {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 2rem;
+}
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #ccc;
+  padding: 1.5rem 2rem;
+  gap: 1rem;
+}
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .content-block {
+    flex-direction: column;
+    text-align: center;
+  }
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">MiLogo</div>
+  <nav class="nav" aria-label="Navegación principal">
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Nosotros</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Título Principal de la Landing</h1>
+    <p>Subtítulo o descripción breve del servicio ofrecido.</p>
+    <button>Comenzar Ahora</button>
+  </section>
+
+  <section class="features">
+    <article class="features__item">
+      <div class="icon">🔧</div>
+      <h3>Funcionalidad 1</h3>
+      <p>Descripción corta de esta característica.</p>
+    </article>
+    <article class="features__item">
+      <div class="icon">⚡</div>
+      <h3>Funcionalidad 2</h3>
+      <p>Descripción corta de esta característica.</p>
+    </article>
+    <article class="features__item">
+      <div class="icon">💡</div>
+      <h3>Funcionalidad 3</h3>
+      <p>Descripción corta de esta característica.</p>
+    </article>
+  </section>
+
+  <section class="content-block">
+    <figure>
+      <img src="https://via.placeholder.com/400x250" alt="Vista previa del producto">
+      <figcaption>Vista previa del producto</figcaption>
+    </figure>
+    <div>
+      <h2>Título del Bloque de Contenido</h2>
+      <p>Texto explicativo que acompaña la imagen de ejemplo para describir los beneficios del producto o servicio.</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <article class="testimonial">
+      <p>"Excelente servicio y atención. Recomendado 100%."</p>
+      <p><strong>- Cliente 1</strong></p>
+    </article>
+    <article class="testimonial">
+      <p>"Una experiencia increíble, fácil y rápida."</p>
+      <p><strong>- Cliente 2</strong></p>
+    </article>
+  </section>
+
+  <section class="cta-fullwidth">
+    <h2>¿Listo para comenzar?</h2>
+    <button>Contáctanos</button>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="#">Privacidad</a>
+    <a href="#">Términos</a>
+    <a href="#">Soporte</a>
+  </div>
+  <div class="contact-info">
+    <p>info@ejemplo.com</p>
+  </div>
+</footer>
+
+</body>
+</html>
